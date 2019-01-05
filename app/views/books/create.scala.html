@@ -1,0 +1,13 @@
+@(form: Form[Book])
+
+@layout("Create Books"){
+@helper.form(routes.BooksController.save) {
+@helper.CSRF.formField
+
+@views.html.partials._booksFormFields(form)
+
+<button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-plus"></i>
+    Create Book</button>
+
+}
+}
